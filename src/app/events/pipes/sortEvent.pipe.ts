@@ -5,7 +5,14 @@ import { IEvent } from './../../Interfaces/event.interface';
 })
 
 export class SortEventPipe implements PipeTransform {
-    transform(_events: Array<IEvent>): any {
-        return _events;
+    transform(_events: Array<IEvent>, _inverse: Boolean): Array<IEvent> {
+        if (_events.length === 0) {
+            return _events;
+        }
+        return _events.sort(function (a: IEvent, b: IEvent) {
+            let front: number;
+            front = _inverse ? 1 : -1;
+            return (a.eventName > b.eventName ? front : -front);
+        });
     }
 }

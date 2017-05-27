@@ -7,14 +7,20 @@ import { EventsService } from './../events.service';
     templateUrl: './event.component.html',
     styleUrls: ['./event.component.html']
 })
+
 export class EventComponent implements OnInit {
     title: String = 'Event List Component';
     eventsList: Array<IEvent> = [];
+    inverse: Boolean = false;
     constructor(private eventsService: EventsService) { }
     ngOnInit(): void {
         this.eventsService.eventListStream$.subscribe(data => this.eventsList = data);
     }
     setEvents() {
         this.eventsService.setEvents();
+    }
+
+    sortBy(): void {
+        this.inverse = !this.inverse;
     }
 }
