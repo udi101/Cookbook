@@ -1,0 +1,28 @@
+<div class="page-header">
+  <h4>{{title}}</h4>
+</div>
+<div class="row">
+<div class="col-sm-6">
+  <table class="table table-condensed table-hover">
+    <thead>
+      <tr>
+        <th>Event Name</th>
+        <th>Event Price</th>
+        <th>Start Date</th>
+        <th>End Date</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let event of eventsList">
+        <td>{{event.eventName}}</td>
+        <td>{{event.eventPrice | currency: 'ILS':true}}</td>
+        <td>{{event.startDate | date : 'dd/MM/yyyy HH:mm'}}</td>
+        <td>{{event.endDate | date : 'dd/MM/yyyy HH:mm'}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</div>
+<div class="row col-sm-2">
+<button class="btn btn-sm btn-primary" (click)="setEvents()">Set Events</button>
+</div>
