@@ -1,4 +1,4 @@
-import { Component, OnInit,ChangeDetectionStrategy } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { IEvent } from './../../Interfaces/event.interface';
 import { EventsService } from './../events.service';
 
@@ -14,7 +14,7 @@ export class EventComponent implements OnInit {
     ngOnInit(): void {
         this.eventsService.eventListStream$.subscribe(data => this.eventsList = data);
     }
-    setEvents(){
+    setEvents() {
         this.eventsService.setEvents();
     }
 }

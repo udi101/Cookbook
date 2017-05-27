@@ -13,6 +13,12 @@ const CEvents: Array<IEvent> = [
         eventPrice: 34,
         startDate: new Date('2017-05-04 18:00'),
         endDate: new Date('2017-05-04 18:30')
+    },
+    {
+        eventName: 'Harel',
+        eventPrice: 30,
+        startDate: new Date('2017-05-12 19:00'),
+        endDate: new Date('2017-05-12 20:30')
     }
 ];
 
@@ -22,8 +28,6 @@ export class EventsService {
     eventListStream$ = this.eventList.asObservable();
 
     constructor() {
-        this.eventList.next(CEvents);
-        console.log(CEvents);
     }
     setEvents() {
         (function(x){

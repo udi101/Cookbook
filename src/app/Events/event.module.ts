@@ -7,6 +7,10 @@ import { FormsModule } from '@angular/forms';
 import { EventComponent } from './List/event.component';
 import { AddEventComponent } from './Add/addEvent.component';
 
+// pipes
+import { SortEventPipe } from './pipes/sortEvent.pipe';
+import { FilterEventPipe } from './pipes/filterEvent.pipe';
+
 // Services
 import { EventsService } from './events.service';
 
@@ -20,7 +24,7 @@ import { EventsService } from './events.service';
         ])
     ],
     exports: [],
-    declarations: [EventComponent, AddEventComponent],
+    declarations: [EventComponent, AddEventComponent, SortEventPipe, FilterEventPipe],
     providers: [EventsService]
 })
 export class EventModule { }

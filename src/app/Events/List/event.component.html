@@ -13,11 +13,11 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let event of eventsList">
-        <td>{{event.eventName}}</td>
-        <td>{{event.eventPrice | currency: 'ILS':true}}</td>
-        <td>{{event.startDate | date : 'dd/MM/yyyy HH:mm'}}</td>
-        <td>{{event.endDate | date : 'dd/MM/yyyy HH:mm'}}</td>
+      <tr *ngFor="let event of eventsList | filterEvent">
+        <td>{{event?.eventName}}</td>
+        <td>{{event?.eventPrice | currency: 'ILS':true}}</td>
+        <td>{{event?.startDate | date : 'dd/MM/yyyy HH:mm'}}</td>
+        <td>{{event?.endDate | date : 'dd/MM/yyyy HH:mm'}}</td>
       </tr>
     </tbody>
   </table>
