@@ -18,7 +18,8 @@ import { HomeComponent } from './home/home.component';
     BrowserModule,
     RouterModule.forRoot([
       { path: 'Home', component: HomeComponent },
-      {path: 'Events', loadChildren: './Events/event.module#EventModule'},
+      { path: 'Events', loadChildren: './Events/event.module#EventModule' },
+      { path: 'Family', loadChildren: './Family/family.module#FamilyModule' },
       { path: '**', component: HomeComponent }
     ]),
     BsDropdownModule.forRoot()

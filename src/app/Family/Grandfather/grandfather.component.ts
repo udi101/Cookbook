@@ -5,5 +5,6 @@ import { Component, OnInit } from '@angular/core';
     styleUrls: ['./grandfather.component.css']
 })
 export class GrandfatherComponent {
+    value: String = 'Grand';
 
 }
