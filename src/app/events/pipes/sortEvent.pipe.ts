@@ -9,10 +9,10 @@ export class SortEventPipe implements PipeTransform {
         if (_events.length === 0) {
             return _events;
         }
-        return _events.sort(function (a: IEvent, b: IEvent) {
+        return _events.sort(function (a: IEvent, b: IEvent): number {
             let front: number;
             front = _inverse ? 1 : -1;
-            return (a.eventName > b.eventName ? front : -front);
+            return (a.eventName > b.eventName ? front : a.eventName < b.eventName ? -front : 0);
         });
     }
 }

@@ -3,5 +3,5 @@ import { Subject } from 'rxjs/Subject';
 
 @Injectable()
 export class FamilyService {
-
+    value:String = 'Grandfather';
 }

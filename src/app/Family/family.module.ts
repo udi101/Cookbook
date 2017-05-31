@@ -5,11 +5,13 @@ import { RouterModule } from '@angular/router';
 // Components
 import { FamilyComponent } from './family.component';
 import { GrandfatherComponent } from './Grandfather/grandfather.component';
+import { FatherComponent } from './Father/father.component';
 
 @NgModule({
     declarations: [
         FamilyComponent,
-        GrandfatherComponent
+        GrandfatherComponent,
+        FatherComponent
     ],
     imports: [CommonModule,
         RouterModule.forChild([
