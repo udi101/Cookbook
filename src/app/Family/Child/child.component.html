@@ -1,0 +1,13 @@
+<div class="well well-lg">
+  Child Value is: <span style="color:red"> {{_familyValue}}</span>
+  <hr>
+  <form changeValueForm="ngForm" (ngSubmit)="changeValue(familyValue.value)" >
+      <div class="form-group">
+          <label for="" class="control-label">Family Value</label>
+          <input type="text" class="form-control input-sm" #familyValue="ngModel" name="familyValue" ngModel>
+      </div>
+      <div class="form-group">
+          <button type="submit" class="btn btn-sm btn-primary">Change Value</button>
+      </div>
+  </form>
+</div>
