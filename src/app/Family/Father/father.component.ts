@@ -14,7 +14,7 @@ export class FatherComponent implements OnInit {
   ngOnInit() {
     this.familyService.famliyValue$.subscribe(data => this._familyValue = data);
   }
-  changeValue(_value:string){
+  changeValue(_value: string) {
     this.familyService.setValue(_value);
   }
 

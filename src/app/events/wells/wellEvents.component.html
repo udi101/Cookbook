@@ -1,0 +1,27 @@
+<div class="page-header">
+  <h4>Wells Events Component</h4>
+</div>
+<div class="row col-sm-11">
+  <div class="col-sm-3" *ngFor="let event of _events">
+    <div class="well well-lg">
+        <table class="table table-condensed table-hover">
+            <tr>
+                <td>Event Name:</td>
+                <td><strong>{{event.eventName}}</strong></td>
+            </tr>
+            <tr>
+                <td>Event Price</td>
+                <td>{{event.eventPrice | currency:'ILS':true}}</td>
+            </tr>
+            <tr>
+                <td>Start Date:</td>
+                <td>{{event.startDate | date:'dd-MM-yyyy'}}</td>
+            </tr>
+            <tr>
+                <td>End Date:</td>
+                <td>{{event.endDate | date:'dd-MM-yyyy'}}</td>
+            </tr>
+        </table>     
+    </div>
+  </div>
+</div>

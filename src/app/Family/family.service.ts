@@ -9,10 +9,10 @@ export class FamilyService {
 
     setValue(_value: string) {
         (function (fv) {
-            "use strict"
+            'use strict';
             setTimeout(function () {
-                fv.next(_value)
+                fv.next(_value);
             }, 1500);
-        })(this.familyValue)
+        })(this.familyValue);
     }
 }

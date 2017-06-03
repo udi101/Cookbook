@@ -6,6 +6,7 @@ import { FormsModule } from '@angular/forms';
 // Components
 import { EventComponent } from './List/event.component';
 import { AddEventComponent } from './Add/addEvent.component';
+import { WellEventComponent } from './wells/wellEvenst.component';
 
 // pipes
 import { SortEventPipe } from './pipes/sortEvent.pipe';
@@ -20,11 +21,12 @@ import { EventsService } from './events.service';
         FormsModule,
         RouterModule.forChild([
             { path: 'List', component: EventComponent },
-            { path: 'Add', component: AddEventComponent }
+            { path: 'Add', component: AddEventComponent },
+            { path: 'Wells', component: WellEventComponent }
         ])
     ],
     exports: [],
-    declarations: [EventComponent, AddEventComponent, SortEventPipe, FilterEventPipe],
+    declarations: [EventComponent, AddEventComponent, SortEventPipe, FilterEventPipe, WellEventComponent],
     providers: [EventsService]
 })
 export class EventModule { }
