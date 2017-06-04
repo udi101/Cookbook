@@ -8,19 +8,25 @@ import { FamilyComponent } from './family.component';
 import { GrandfatherComponent } from './Grandfather/grandfather.component';
 import { FatherComponent } from './Father/father.component';
 import { ChildComponent } from './Child/child.component';
+import { ParentComponent } from './Parent/parent.component';
+import { SonComonent } from './Son/son.component';
 
 @NgModule({
     declarations: [
         FamilyComponent,
         GrandfatherComponent,
         FatherComponent,
-        ChildComponent
+        ChildComponent,
+        ParentComponent,
+        SonComonent
     ],
     imports: [
         CommonModule,
         FormsModule,
         RouterModule.forChild([
-            { path: '', component: FamilyComponent }])],
+            { path: '', component: FamilyComponent },
+            { path: 'Parent', component: ParentComponent }
+        ])],
     exports: [],
     providers: []
 })

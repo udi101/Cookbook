@@ -1,0 +1,4 @@
+<div class="well well-lg" (click)="toggleEventBody()">
+    <ng-content select="[eventTitle]"></ng-content>
+    <ng-content select="[eventBody]" *ngIf="displayEventBody"></ng-content>
+</div>

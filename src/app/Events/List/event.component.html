@@ -23,6 +23,7 @@
     </table>
   </div>
 </div>
-<div class="row col-sm-2">
-  <button class="btn btn-sm btn-primary" (click)="setEvents()">Set Events</button>
+<div class="row col-sm-2" >
+  <button *ngIf="addEventsDisplay; else elseBlock" class="btn btn-sm btn-primary" (click)="setEvents()">Get Events</button>
+  <ng-template #elseBlock ><button class="btn btn-sm btn-danger" (click)="clearEvents()">Clear Events</button></ng-template>
 </div>

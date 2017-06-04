@@ -5,6 +5,7 @@ import { FamilyService } from './family.service';
     styleUrls: ['./family.component.css'],
     providers: [FamilyService]
 })
-export class FamilyComponent {
 
+export class FamilyComponent {
 }
+

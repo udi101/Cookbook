@@ -16,21 +16,21 @@ const CEvents: Array<IEvent> = [
     },
     {
         eventName: 'Microsoft',
-        eventPrice: 50,
-        startDate: new Date(2015, 1, 20, 18, 30),
-        endDate: new Date(2015, 2, 20, 19)
+        eventPrice: 60,
+        startDate: new Date('2017-06-02 16:00'),
+        endDate: new Date('2017-06-02 16:30:00')
     },
     {
         eventName: 'ECI',
-        eventPrice: 34,
-        startDate: new Date('2017-05-04 18:00'),
-        endDate: new Date('2017-05-04 18:30')
+        eventPrice: 24,
+        startDate: new Date('2017-06-12 18:00'),
+        endDate: new Date('2017-06-12 18:30')
     },
     {
         eventName: 'Harel',
-        eventPrice: 30,
-        startDate: new Date('2017-05-12 19:00'),
-        endDate: new Date('2017-05-12 20:30')
+        eventPrice: 33,
+        startDate: new Date('2017-05-24 19:00'),
+        endDate: new Date('2017-05-24 20:30')
     }
 ];
 

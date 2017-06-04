@@ -6,7 +6,6 @@ export class FamilyService {
     private familyValue: Subject<string> = new Subject<string>();
     famliyValue$ = this.familyValue.asObservable();
 
-
     setValue(_value: string) {
         (function (fv) {
             'use strict';

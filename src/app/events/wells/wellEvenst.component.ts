@@ -13,6 +13,6 @@ export class WellEventComponent implements OnInit {
         (function(x){
         setTimeout(function() {
             x.setEvents();
-        }, 2000);})(this.eventsService)
+        }, 500);})(this.eventsService)
     }
 }
