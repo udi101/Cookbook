@@ -8,8 +8,7 @@ export class SonComonent implements OnInit {
     @Output() sonEvent:EventEmitter<string> = new EventEmitter<string>();
     ngOnInit(){
     }
-    emitMe(){
-        this.sonEvent.emit('Udi Mazor');
-        console.log('test');
+    emitMe(k:string){
+        this.sonEvent.emit(k);
     }
 }

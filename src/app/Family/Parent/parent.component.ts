@@ -5,4 +5,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ParentComponent {
     title: String = "Parent Component";
+
+    sonEmiter(tr:string){
+        this.title = tr;
+    }
 }
