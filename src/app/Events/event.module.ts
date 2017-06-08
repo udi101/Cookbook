@@ -6,7 +6,7 @@ import { FormsModule } from '@angular/forms';
 // Components
 import { EventComponent } from './List/event.component';
 import { AddEventComponent } from './Add/addEvent.component';
-import { WellEventComponent } from './wells/wellEvenst.component';
+import { WellEventComponent } from './wells/wellEvents.component';
 import { WellContainerComponent } from './wellContainer/wellContainer.component';
 
 // pipes
@@ -15,7 +15,6 @@ import { FilterEventPipe } from './pipes/filterEvent.pipe';
 
 // Services
 import { EventsService } from './events.service';
-import { RttDirective } from './rtt.directive';
 
 @NgModule({
     imports: [
@@ -34,8 +33,7 @@ import { RttDirective } from './rtt.directive';
           SortEventPipe,
            FilterEventPipe,
             WellEventComponent,
-            WellContainerComponent,
-            RttDirective
+            WellContainerComponent
             ],
     providers: [EventsService]
 })

@@ -5,12 +5,12 @@ import { Component, OnInit } from '@angular/core';
     styleUrls: ['./wellContainer.component.css']
 })
 export class WellContainerComponent implements OnInit {
-
+    displayEventBody: Boolean = true;
     ngOnInit() { }
-    displayEventBody:Boolean = true;
-    
+
+
     // Show/Hide the event body
-    toggleEventBody():void{
+    toggleEventBody(): void {
         this.displayEventBody = !this.displayEventBody;
     }
 }

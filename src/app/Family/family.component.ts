@@ -8,4 +8,3 @@ import { FamilyService } from './family.service';
 
 export class FamilyComponent {
 }
-

@@ -4,13 +4,13 @@ import { Component, OnInit } from '@angular/core';
     styleUrls: ['./parent.component.css']
 })
 export class ParentComponent {
-    title: String = "Parent Component";
-    sonTitle:string = 'DR650';
+    title: String = 'Parent Component';
+    sonTitle: String = 'DR650';
 
     sonEmiter(tr: string) {
         this.title = tr;
     }
-    
+
     changeSon(_title: string) {
         this.sonTitle = _title;
     }
