@@ -13,6 +13,9 @@ import { WellContainerComponent } from './wellContainer/wellContainer.component'
 import { SortEventPipe } from './pipes/sortEvent.pipe';
 import { FilterEventPipe } from './pipes/filterEvent.pipe';
 
+// Directives
+import { HighlightDirective } from './highlight/highlight.directive';
+
 // Services
 import { EventsService } from './events.service';
 
@@ -29,12 +32,13 @@ import { EventsService } from './events.service';
     exports: [],
     declarations: [
         EventComponent,
-         AddEventComponent,
-          SortEventPipe,
-           FilterEventPipe,
-            WellEventComponent,
-            WellContainerComponent
-            ],
+        AddEventComponent,
+        SortEventPipe,
+        FilterEventPipe,
+        WellEventComponent,
+        WellContainerComponent,
+        HighlightDirective
+    ],
     providers: [EventsService]
 })
 export class EventModule { }
