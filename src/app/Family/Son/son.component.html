@@ -1,8 +1,9 @@
 <div class="page-header">
   <h4>Son Header</h4>
+  {{title}}
 </div>
 <div class="well col-sm-3">
-  <form (ngSubmit)="emitMe(sonValue.value)">
+  <form (ngSubmit)="sonClick(sonValue.value)">
     <div class="form-group">
         <label for="" class="control-label">Enter Value for son</label>
       <input type="text" #sonValue class="form-control input-sm">

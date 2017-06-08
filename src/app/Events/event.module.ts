@@ -15,6 +15,7 @@ import { FilterEventPipe } from './pipes/filterEvent.pipe';
 
 // Services
 import { EventsService } from './events.service';
+import { RttDirective } from './rtt.directive';
 
 @NgModule({
     imports: [
@@ -33,7 +34,8 @@ import { EventsService } from './events.service';
           SortEventPipe,
            FilterEventPipe,
             WellEventComponent,
-            WellContainerComponent
+            WellContainerComponent,
+            RttDirective
             ],
     providers: [EventsService]
 })

@@ -1,5 +1,24 @@
 <div class="page-header">
-    <h4>Parent Component</h4>
+  <h4>Parent Component</h4>
 </div>
 {{title}}
-<app-son (sonEvent)="sonEmiter($event)">Loading</app-son>
+<div class="row">
+  <div class="col-sm-3">
+    <div class="well">
+      <form (ngSubmit)="changeSon(sonValue.value)">
+        <div class="form-group">
+          <label for="" class="control-label">Title</label>
+          <input type="text" #sonValue class="form-control input-sm">
+        </div>
+        <div class="form-group">
+          <button type="submit" class="btn btn-sm btn-primary">Change Son</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-12">
+    <app-son (sonEvent)="sonEmiter($event)" [title]="sonTitle">Loading</app-son>
+  </div>
+</div>
