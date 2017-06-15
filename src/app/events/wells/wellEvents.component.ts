@@ -9,11 +9,6 @@ export class WellEventComponent implements OnInit {
     _events: Array<IEvent> = [];
     constructor(private eventsService: EventsService) { }
     ngOnInit() {
-        this.eventsService.eventListStream$.subscribe(data => { this._events = data; });
-        (function (x) {
-            setTimeout(function () {
-                x.setEvents();
-            }, 500);
-        })(this.eventsService)
+        this.eventsService.getEvents().subscribe(data => this._events = data);
     }
 }

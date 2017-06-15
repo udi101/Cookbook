@@ -1,0 +1,31 @@
+[{
+    "eventName": "Graduway",
+    "eventPrice": 50,
+    "startDate": "2017-02-03 16:35:00",
+    "endDate": "2017-02-03 18:00:00"
+  },
+  {
+    "eventName": "Migdal",
+    "eventPrice": 34,
+    "startDate": "2017-05-04 18:21",
+    "endDate": "2017-05-04 18:30"
+  },
+  {
+    "eventName": "Microsoft",
+    "eventPrice": 60,
+    "startDate": "2017-06-02 16:00",
+    "endDate": "2017-06-02 16:30:00"
+  },
+  {
+    "eventName": "ECI",
+    "eventPrice": 24,
+    "startDate": "2017-06-12 18:00",
+    "endDate": "2018-06-12 18:30"
+  },
+  {
+    "eventName": "Harel",
+    "eventPrice": 33,
+    "startDate": "2017-05-24 19:00",
+    "endDate": "2017-05-24 20:30"
+  }
+]
