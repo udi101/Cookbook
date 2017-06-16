@@ -14,8 +14,8 @@ describe('Event Service Tests', () => {
         it('should send get to tight uri', () => {
             mockHttp.get.and.returnValue(Observable.of('value'));
             eventService.getEvents();
-            expect(mockHttp.get).toHaveBeenCalledWith('./../assets/events.json',jasmine.a ny(Object));
-        })
-    })
+            expect(mockHttp.get).toHaveBeenCalledWith('./../assets/events.json', jasmine.any(Object));
+        });
+    });
 
-})
+});

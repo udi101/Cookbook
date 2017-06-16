@@ -8,6 +8,6 @@ export class HighlightDirective implements OnInit {
     }
     ngOnInit() {
         this.el = this.ref.nativeElement;
-        this.el.addEventListener('dblclick',()=>this.el.style.color = 'red');
+        this.el.addEventListener('dblclick', () => this.el.style.color = 'red');
     }
 }

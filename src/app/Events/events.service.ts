@@ -3,7 +3,7 @@ import { Subject } from 'rxjs/Subject';
 import { IEvent } from './../Interfaces/event.interface';
 import { Http, Response, Headers } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
-import 'rxjs/add/Operator/map';
+import 'rxjs/add/operator/map';
 const CEvents: Array<IEvent> = [
     {
         eventName: 'Graduway',
@@ -46,19 +46,28 @@ export class EventsService {
     }
 
     setEvents() {
+        let _events: Array<IEvent>;
+        this.getEvents().subscribe(data => _events = data);
         (function (x) {
             setTimeout(function () {
-                x.next(CEvents);
+                x.next(_events);
             }, 1000);
         })(this.eventList);
     }
 
+    // setEvents() {
+    //     (function (x) {
+    //         setTimeout(function () {
+    //             x.next(CEvents);
+    //         }, 1000);
+    //     })(this.eventList);
+    // }
+
     // getting the events from assets/events.json file
     getEvents(): Observable<Array<IEvent>> {
-        let headers:Headers = new Headers();
-        headers.append('accept','application/json');
-        
-        return this.http.get('./../assets/events.json',{headers:headers}).map((res: Response) => <Array<IEvent>>res.json());
+        const headers: Headers = new Headers();
+        headers.append('accept', 'application/json');
+        return this.http.get('./../assets/events.json', { headers: headers }).map((res: Response) => <Array<IEvent>>res.json());
     }
 }
 
