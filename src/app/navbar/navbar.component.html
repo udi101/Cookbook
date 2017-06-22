@@ -19,9 +19,10 @@
     <li class="btn-group hand" dropdown>
       <a dropdownToggle class="dropdown-toggle">Family <span class="caret"></span></a>
       <ul *dropdownMenu class="dropdown-menu" role="menu">
-        <li><a [routerLink]="'Family'">Family</a></li>
+        <li><a [routerLink]="['Family']">Family</a></li>
         <li><a [routerLink]="'Family/Parent'">Parents</a></li>
       </ul>
     </li>
+    <li><a [routerLink]="['Redux']">Redux</a></li>
   </ul> 
 </nav>

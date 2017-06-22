@@ -10,6 +10,8 @@ import { FatherComponent } from './Father/father.component';
 import { ChildComponent } from './Child/child.component';
 import { ParentComponent } from './Parent/parent.component';
 import { SonComonent } from './Son/son.component';
+import { TestComponent } from './test/test.component';
+
 
 @NgModule({
     declarations: [
@@ -18,7 +20,8 @@ import { SonComonent } from './Son/son.component';
         FatherComponent,
         ChildComponent,
         ParentComponent,
-        SonComonent
+        SonComonent,
+        TestComponent
     ],
     imports: [
         CommonModule,

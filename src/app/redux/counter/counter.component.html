@@ -1,0 +1,18 @@
+<div class="page-header">
+  <h4>Redux Counter Component</h4>
+</div>
+<div class="row">
+  <div class="col-sm-3">
+    <div>
+      Counter via Subscription is: {{counter}}</div>
+    <div>
+      Counter via select is: {{counter$ | async}}</div>
+  </div>
+</div>
+<div class="row" topSpace>
+  <div class="col-sm-3">
+    <button class="btn btn-sm btn-primary" (click)="increase()">Increse <i class="glyphicon glyphicon-plus"></i></button>
+    <button class="btn btn-sm btn-primary" (click)="decrease()">Decrease <i class="glyphicon glyphicon-minus"></i></button>
+
+  </div>
+</div>

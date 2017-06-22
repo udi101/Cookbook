@@ -28,7 +28,8 @@ import { EventsService } from './events.service';
         RouterModule.forChild([
             { path: 'List', component: EventComponent },
             { path: 'Add', component: AddEventComponent },
-            { path: 'Wells', component: WellEventComponent }
+            { path: 'Wells', component: WellEventComponent },
+            { path: 'Wells/:id', component: WellEventComponent }
         ])
     ],
     exports: [],
