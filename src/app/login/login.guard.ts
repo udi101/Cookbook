@@ -6,7 +6,6 @@ import { Observable } from 'rxjs/Observable';
 export class LoginGuard implements CanActivate {
   constructor() { }
   canActivate(next: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean {
-    console.log(next.url);
     return true;
   }
 

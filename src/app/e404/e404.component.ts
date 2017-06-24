@@ -12,6 +12,6 @@ export class E404Component implements OnInit {
   ngOnInit() {
   }
   goHome(): void {
-    this.router.navigate(['\Home']);
+    this.router.navigate(['/Home']);
   }
 }
