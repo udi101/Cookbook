@@ -6,7 +6,7 @@ import { FamilyService } from './../family.service';
     styleUrls: ['./child.component.css']
 })
 export class ChildComponent implements OnInit {
-    private _familyValue: string;
+    public _familyValue: string;
 
     constructor(private familyServie: FamilyService) { }
     ngOnInit() {

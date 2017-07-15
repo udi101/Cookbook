@@ -7,6 +7,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 
+// services
+import { JQUERY_PROVIDER } from './common/jQuery.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,7 +20,7 @@ import { NavbarComponent } from './navbar/navbar.component';
     AppRoutingModule,
     BsDropdownModule.forRoot()
   ],
-  providers: [],
+  providers: [JQUERY_PROVIDER],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -11,9 +11,9 @@
     <li class="btn-group hand" dropdown [ngClass]="{'active': checkActiveLink('/Events')}">
       <a dropdownToggle class="dropdown-toggle">Events<span class="caret"></span></a>
       <ul *dropdownMenu class="dropdown-menu" role="menu">
-        <li><a [routerLink]="['/Events','List',{hand:'first'}]">Events List</a></li>
+        <li><a [routerLink]="['/Events','List',{hand:'first'}]" [queryParams]="{test:1}">Events List</a></li>
         <li><a routerLink='Events/Wells'>Wells</a></li>        
-        <li><a [routerLink]="'Events/Add'">Add Event</a></li>
+        <li><a [routerLink]="['Events/Add',{hand:'first'}]">Add Event</a></li>
       </ul>
     </li>
     <li class="btn-group hand" dropdown>

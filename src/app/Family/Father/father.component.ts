@@ -7,7 +7,7 @@ import { FamilyService } from './../family.service';
   styleUrls: ['./father.component.css']
 })
 export class FatherComponent implements OnInit {
-  private _familyValue: String;
+  public _familyValue: String;
 
   constructor(private familyService: FamilyService) { }
 

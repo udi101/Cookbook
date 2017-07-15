@@ -9,7 +9,7 @@ import { GrandfatherComponent } from './Grandfather/grandfather.component';
 import { FatherComponent } from './Father/father.component';
 import { ChildComponent } from './Child/child.component';
 import { ParentComponent } from './Parent/parent.component';
-import { SonComonent } from './Son/son.component';
+import { SonComponent } from './Son/son.component';
 import { TestComponent } from './test/test.component';
 
 
@@ -20,7 +20,7 @@ import { TestComponent } from './test/test.component';
         FatherComponent,
         ChildComponent,
         ParentComponent,
-        SonComonent,
+        SonComponent,
         TestComponent
     ],
     imports: [

@@ -4,7 +4,7 @@ import { Component, EventEmitter, Output, Input } from '@angular/core';
     templateUrl: './son.component.html',
     styleUrls: ['./son.component.css']
 })
-export class SonComonent {
+export class SonComponent {
     @Output() sonEvent: EventEmitter<string> = new EventEmitter<string>();
     @Input() title: string;
 

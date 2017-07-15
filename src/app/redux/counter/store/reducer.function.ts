@@ -14,15 +14,3 @@ export const reducer: Reducer<ICounterState> = function (state: ICounterState = 
             return state;
     }
 };
-
-// reducer function
-// export function reducer(state: ICounterState = INITIAL_STATE, action: Action): ICounterState {
-//     switch (action.type) {
-//         case CounterActions.INCREASE:
-//             return { counter: state.counter + 1, name: 'incresed' };
-//         case CounterActions.DECREASE:
-//             return { counter: state.counter - 1, name: 'decreased' };
-//         default:
-//             return state;
-//     }
-// }

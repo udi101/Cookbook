@@ -1,7 +1,8 @@
-import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy, OnDestroy } from '@angular/core';
 import { IEvent } from './../../Interfaces/event.interface';
 import { ActivatedRoute, Router } from '@angular/router';
 import { EventsService } from './../events.service';
+import { Subscription } from 'rxjs/Subscription';
 
 @Component({
     selector: 'app-events',
@@ -9,10 +10,11 @@ import { EventsService } from './../events.service';
     styleUrls: ['./event.component.html']
 })
 
-export class EventComponent implements OnInit {
+export class EventComponent implements OnInit, OnDestroy {
     title: String = 'Event List Component';
     addEventsDisplay: Boolean = true;
     name: string;
+    subscription: Subscription;
     eventsList: Array<IEvent> = [];
     inverse: Boolean = false;
 
@@ -21,7 +23,7 @@ export class EventComponent implements OnInit {
         private router: Router) { }
 
     ngOnInit(): void {
-        this.eventsService.eventListStream$.subscribe(data => {
+        this.subscription = this.eventsService.eventListStream$.subscribe(data => {
             this.eventsList = data;
             this.addEventsDisplay = false;
         });
@@ -36,6 +38,10 @@ export class EventComponent implements OnInit {
             this.name = params.get('name');
             console.log('this is: ' + this.name);
         });
+    }
+
+    ngOnDestroy(): void {
+        this.subscription.unsubscribe();
     }
 
     // Get the events from the Service

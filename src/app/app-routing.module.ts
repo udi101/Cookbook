@@ -8,13 +8,13 @@ import { E404Component } from './e404/e404.component';
 
 // The Routes
 const ROUTES: Routes = [
-    { path: 'Home', component: HomeComponent },
+    { path: 'Home', component: HomeComponent, data: { title: 'Udi Mazor' }  },
     { path: 'Events', loadChildren: './Events/event.module#EventModule', canActivate: [LoginGuard] },
     { path: 'Family', loadChildren: './Family/family.module#FamilyModule' },
     { path: 'Redux', loadChildren: './redux/redux.module#ReduxModule' },
-    { path: '', component: HomeComponent },
+    { path: '', redirectTo: '/Home', pathMatch: 'full' },
     { path: '**', component: E404Component }
-    ];
+];
 
 @NgModule({
     imports: [
