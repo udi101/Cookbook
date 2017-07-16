@@ -15,10 +15,11 @@ import { SortEventPipe } from './pipes/sortEvent.pipe';
 import { FilterEventPipe } from './pipes/filterEvent.pipe';
 
 // Directives
-import { HighlightDirective } from './highlight/highlight.directive';
+import { MarkerDirective } from './marker/marker.directive';
 
 // Services
 import { EventsService } from './events.service';
+import { EventResolver } from './event-resolver.service';
 
 @NgModule({
     imports: [
@@ -29,7 +30,7 @@ import { EventsService } from './events.service';
             { path: 'List', component: EventComponent },
             { path: 'List/:name', component: EventComponent },
             { path: 'Add', component: AddEventComponent },
-            { path: 'Wells', component: WellEventComponent },
+            { path: 'Wells', component: WellEventComponent, resolve: { eventsList: EventResolver  } },
             { path: 'Wells/:id', component: WellEventComponent }
         ])
     ],
@@ -38,11 +39,11 @@ import { EventsService } from './events.service';
         EventComponent,
         AddEventComponent,
         SortEventPipe,
+        MarkerDirective,
         FilterEventPipe,
         WellEventComponent,
-        WellContainerComponent,
-        HighlightDirective
+        WellContainerComponent
     ],
-    providers: [EventsService]
+    providers: [EventsService, EventResolver]
 })
 export class EventModule { }

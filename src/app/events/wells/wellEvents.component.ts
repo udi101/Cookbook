@@ -14,7 +14,11 @@ export class WellEventComponent implements OnInit {
         let tt: Array<any>;
         tt = _.compact([0, 1, false, 2, 3]);
         console.log('tt is: ' + tt);
-        this.eventsService.getEvents().subscribe(data => this._events = data);
-        console.log('the route is: ' + this.route.snapshot.params['id']);
+        // this.route.snapshot.data['eventsList'];  // This is option without observables
+        this.route.data.subscribe(data => {
+            this._events = data['eventsList'];
+            console.log('Data recived from the yservice' + data['eventsList']);
+        });
+        console.log('the route is: ' + this.route.snapshot.params);
     }
 }

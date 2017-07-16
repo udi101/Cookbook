@@ -1,4 +1,4 @@
-import { Component, OnInit, ChangeDetectionStrategy, OnDestroy } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy, OnDestroy, ViewChild, ElementRef } from '@angular/core';
 import { IEvent } from './../../Interfaces/event.interface';
 import { ActivatedRoute, Router } from '@angular/router';
 import { EventsService } from './../events.service';
@@ -6,8 +6,7 @@ import { Subscription } from 'rxjs/Subscription';
 
 @Component({
     selector: 'app-events',
-    templateUrl: './event.component.html',
-    styleUrls: ['./event.component.html']
+    templateUrl: './event.component.html'
 })
 
 export class EventComponent implements OnInit, OnDestroy {
@@ -17,12 +16,16 @@ export class EventComponent implements OnInit, OnDestroy {
     subscription: Subscription;
     eventsList: Array<IEvent> = [];
     inverse: Boolean = false;
+    @ViewChild('priceTitle') el: ElementRef;    // use view child to set td elementRef to Orange color
 
     constructor(private eventsService: EventsService,
         private activatedRoute: ActivatedRoute,
         private router: Router) { }
 
     ngOnInit(): void {
+        this.el.nativeElement.style.color = 'green';
+        // const element: HTMLElement = this.el.nativeElement;
+        // element.style.color = 'orange';
         this.subscription = this.eventsService.eventListStream$.subscribe(data => {
             this.eventsList = data;
             this.addEventsDisplay = false;
